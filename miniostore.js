@@ -6,13 +6,11 @@ var Minio = require('minio');
 var toArray = require('stream-to-array');
 
 var minioClient = new Minio({
-    // endPoint: 's3.amazonaws.com',
-    // port: 9000,
- 	 endPoint: 's3.amazonaws.com',
-    //accessKey: 'Q3AM3UQ867SPQQA43P2F', 
-    //secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
-	 accessKey: 'AKIAIZWHT2U2LCVHRFVA',
-	 secretKey: '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'
+     endPoint: 'play.minio.io',
+     port: 9000,
+     accessKey: 'Q3AM3UQ867SPQQA43P2F', 
+     secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+	  
 });
 
 // set up handlebars view engine
