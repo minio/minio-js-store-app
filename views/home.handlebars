@@ -1,0 +1,59 @@
+ <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1>Minio Nodejs Store App</h1>
+            <p>Store your assets in a Minio Server or Amazon S3 and retrieve them inside your Node.js Store Application</p>
+            <p><a class="btn btn-primary btn-large">Go!</a>
+            </p>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Latest Products</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+			{{#each url}}
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="{{this}}" max-height=200 max-width=200 alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+ 
+ 		{{/each}}   
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        
+
+    </div>
+    <!-- /.container -->
+
+ 
+ 
+<!--
+ {{#each url}}
+            <div class="row">
+				<img src="{{this}}" height="100" width="100">
+            </div>
+ {{/each}}-->
