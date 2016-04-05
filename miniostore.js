@@ -26,7 +26,7 @@ app.get('/', function(req, res){
 	objectsStream.on('data', function(obj) {
 	    console.log(obj);
 		//lets construct the URL with our object name
-		assets.push("http://play.minio.io:9000/minio-store/"+obj.name);
+		assets.push("https://play.minio.io:9000/minio-store/"+obj.name);
 	});
 	objectsStream.on('error', function(e) {
 		console.log(e);
