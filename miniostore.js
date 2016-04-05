@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var Minio = require('minio');
 
-//instantiate a minioClient Object with an endPoint, Port & Keys
+// instantiate a minioClient Object with an endPoint, Port & Keys
 var minioClient = new Minio({
      endPoint: 'play.minio.io',
      port: 9000,
