@@ -33,6 +33,7 @@ app.get('/', function(req, res){
 	});
 	objectsStream.on('end', function(e) {
 		console.log(assets);
+		// pass our assets array to our home.handlebars template
 		res.render('home', { url: assets });	
 	});
          
