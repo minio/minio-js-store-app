@@ -28,7 +28,7 @@ app.get('/', function(req, res){
 	var objectsStream = minioClient.listObjects('minio-store', '', true)
 	objectsStream.on('data', function(obj) {
 	    console.log(obj);
-		assets.push("https://s3.amazonaws.com/minio-store/"+obj.name);
+		assets.push("https://play.minio.io:9000/minio-store/"+obj.name);
 	});
 	objectsStream.on('error', function(e) {
 		console.log(e);
