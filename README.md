@@ -91,7 +91,7 @@ app.get('/', function(req, res){
 ## 7. Create Views
 
 Loop through `assets_url` in `home.handlebars` to render the thumbnails of product images. For simplicity in this example we do not use a database to store rows of product information. But you may store the image url from this array into your products schema if needed.
-```html
+```text
 <!-- Page Features -->
 <div class="row text-center">
 	{{#each url}}
