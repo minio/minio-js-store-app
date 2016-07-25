@@ -9,7 +9,7 @@ The full code is available at  [https://github.com/minio/minio-js-store-app](htt
 
 ## 1. Prerequisites
 
-* Install mc  from [here](https://docs.minio.io/docs/minio-client-quick-start-guide).
+* Install mc  from [here](https://docs.minio.io/docs/minio-client-quickstart-guide).
 * Install Minio Server from [here](https://docs.minio.io/docs/minio ).
 
 ## 2. Dependencies
