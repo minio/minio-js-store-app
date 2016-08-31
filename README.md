@@ -3,7 +3,7 @@
 ![minio_JS1](https://github.com/minio/minio-js-store-app/blob/master/docs/screenshots/minio-JS1.jpg?raw=true)
 
 This example will guide you through the code to build a simple Node.js Shopping App with the Minio Server.  
-We will use [Minio Javascript Client SDK](https://docs.minio.io/docs/javascript-client-quickstart-guide) to fetch the application's image assets from the Minio Server. 
+We will use [Minio Javascript Client SDK](https://docs.minio.io/docs/javascript-client-quickstart-guide) to fetch the application's image assets from the Minio Server.
 
 The full code is available at  [https://github.com/minio/minio-js-store-app](https://github.com/minio/minio-js-store-app), and is released under Apache 2.0 License.
 
@@ -15,13 +15,13 @@ The full code is available at  [https://github.com/minio/minio-js-store-app](htt
 ## 2. Dependencies
 
 * [Express web framework](http://expressjs.com).
-* [Handlebars](http://handlebarsjs.com). 
+* [Handlebars](http://handlebarsjs.com).
 
 We will use Express for our application framework and Handlebars as the view engine.
 
 ## 3. Install Packages
 
-Get the code for this example as shown below and then do npm install to get the express, handlebars and minio node-modules installed. 
+Get the code for this example as shown below and then do npm install to get the express, handlebars and minio node-modules installed.
 
 `minio-store.js` will serve as our app's entry point.
 
@@ -44,11 +44,11 @@ Make a bucket called 'minio-store' on play.minio.io. Use `mc mb` command to acco
     $ mc mb play/minio-store
 
    ```
-2. Store product image assets can be set to public readwrite.  Use `mc access` command to set the access policy on this bucket to "readwrite". More details on the `mc access` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#access).
+2. Store product image assets can be set to public readwrite. Use `mc policy` command to set the access policy on this bucket to "both". More details on the `mc policy` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#policy).
 
    ```sh
 
-    $ mc access readwrite play/minio-store
+    $ mc policy both play/minio-store
 
    ```
 
@@ -89,7 +89,7 @@ var minioClient = new Minio({
 
 ## 6. Call listObjects
 
-Set up a route for '/' in the minio-store.js file. Using the [listObjects](https://docs.minio.io/docs/javascript-client-api-guide#listObjects) method, get a list of all the files from the minio-store bucket. listObjects returns product urls which are pushed into an array variable called assets. Pass the assets array to `home.handlebars` view. 
+Set up a route for '/' in the minio-store.js file. Using the [listObjects](https://docs.minio.io/docs/javascript-client-api-guide#listObjects) method, get a list of all the files from the minio-store bucket. listObjects returns product urls which are pushed into an array variable called assets. Pass the assets array to `home.handlebars` view.
 
 
 ```js
@@ -158,6 +158,5 @@ The full code is available here :  [https://github.com/minio/minio-js-store-app]
 
 ## 9.  Explore Further.
 
-- [Using `minio-js` client sdk with Minio Server](https://docs.minio.io/docs/javascript-client-quickstart-guide). 
+- [Using `minio-js` client sdk with Minio Server](https://docs.minio.io/docs/javascript-client-quickstart-guide).
 - [Minio JavaScript Client SDK API Reference](https://docs.minio.io/docs/javascript-client-api-reference).
-  
