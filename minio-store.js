@@ -24,7 +24,6 @@ var handlebars = require('express-handlebars').create({
 });
 
 // Instantiate a minioClient Object with an endPoint, port & keys.
-
 var minioClient = new Minio.Client({
   endPoint: 'play.minio.io',
   port: 9000,
