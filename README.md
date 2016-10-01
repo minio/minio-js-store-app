@@ -75,7 +75,7 @@ In `minio-store.js` file, require minio and instantiate a `minioClient` object w
 ```js
 
 var Minio = require('minio');
-var minioClient = new Minio({
+var minioClient = new Minio.Client({
  	 endPoint: 'play.minio.io',
    port: 9000,
 	 accessKey: 'Q3AM3UQ867SPQQA43P2F',
