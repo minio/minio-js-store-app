@@ -36,7 +36,7 @@ $ npm install
 ##  4. Set Up Bucket
 
 1. We've created a public minio server https://play.minio.io:9000 for developers to use as a sandbox. Minio Client `mc` is  preconfigured to use the play server. Download [ `mc` ](https://docs.minio.io/docs/minio-client-quick-start-guide) to do the next set of steps.
-Make a bucket called 'minio-store' on play.minio.io. Use `mc mb` command to accomplish this. More details on the `mc mb` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#mb).
+Make a bucket called `minio-store` on play.minio.io. Use `mc mb` command to accomplish this. More details on the `mc mb` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#mb).
 
 
    ```sh
@@ -77,7 +77,7 @@ In `minio-store.js` file, require minio and instantiate a `minioClient` object w
 var Minio = require('minio');
 var minioClient = new Minio.Client({
  	 endPoint: 'play.minio.io',
-   port: 9000,
+     port: 9000,
 	 accessKey: 'Q3AM3UQ867SPQQA43P2F',
 	 secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
 });
