@@ -89,7 +89,7 @@ var minioClient = new Minio.Client({
 
 ## 6. Call listObjects
 
-Set up a route for '/' in the minio-store.js file. Using the [listObjects](https://docs.minio.io/docs/javascript-client-api-guide#listObjects) method, get a list of all the files from the minio-store bucket. listObjects returns product urls which are pushed into an array variable called assets. Pass the assets array to `home.handlebars` view.
+Set up a route for '/' in the minio-store.js file. Using the [listObjects]( https://docs.minio.io/docs/java-client-api-reference#listObjects) method, get a list of all the files from the minio-store bucket. listObjects returns product urls which are pushed into an array variable called assets. Pass the assets array to `home.handlebars` view.
 
 
 ```js
