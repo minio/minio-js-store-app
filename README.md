@@ -25,7 +25,7 @@ Get the code for this example as shown below and then do npm install to get the 
 
 `minio-store.js` will serve as our app's entry point.
 
-```sh
+```
 
 git clone https://github.com/minio/minio-js-store-app
 cd minio-js-store-app
@@ -39,14 +39,14 @@ npm install
 Make a bucket called `minio-store` on play.minio.io. Use `mc mb` command to accomplish this. More details on the `mc mb` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#mb).
 
 
-   ```sh
+   ```
 
     mc mb play/minio-store
 
    ```
 2. Store product image assets can be set to public readwrite. Use `mc policy` command to set the access policy on this bucket to "both". More details on the `mc policy` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#policy).
 
-   ```sh
+   ```
 
     mc policy both play/minio-store
 
@@ -54,7 +54,7 @@ Make a bucket called `minio-store` on play.minio.io. Use `mc mb` command to acco
 
 3. Upload store product pictures into this bucket.  Use `mc cp`  command to do this. More details on the `mc cp` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#cp).
 
-   ```sh
+   ```
 
    mc cp ~/Downloads/Product-1.jpg play/minio-store/
    mc cp ~/Downloads/Product-2.jpg play/minio-store/
@@ -145,7 +145,7 @@ Loop through `assets_url` in `home.handlebars` to render the thumbnails of produ
 
 The full code is available here :  [https://github.com/minio/minio-js-store-app](https://github.com/minio/minio-js-store-app).  Do the following steps to start the app server.
 
-  ```sh
+  ```
 
   git clone https://github.com/minio/minio-js-store-app
   cd minio-js-store-app
