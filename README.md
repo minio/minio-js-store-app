@@ -27,9 +27,9 @@ Get the code for this example as shown below and then do npm install to get the 
 
 ```sh
 
-$ git clone https://github.com/minio/minio-js-store-app
-$ cd minio-js-store-app
-$ npm install
+git clone https://github.com/minio/minio-js-store-app
+cd minio-js-store-app
+npm install
 
 ```
 
@@ -41,14 +41,14 @@ Make a bucket called `minio-store` on play.minio.io. Use `mc mb` command to acco
 
    ```sh
 
-    $ mc mb play/minio-store
+    mc mb play/minio-store
 
    ```
 2. Store product image assets can be set to public readwrite. Use `mc policy` command to set the access policy on this bucket to "both". More details on the `mc policy` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#policy).
 
    ```sh
 
-    $ mc policy both play/minio-store
+    mc policy both play/minio-store
 
    ```
 
@@ -56,10 +56,10 @@ Make a bucket called `minio-store` on play.minio.io. Use `mc mb` command to acco
 
    ```sh
 
-   $ mc cp ~/Downloads/Product-1.jpg play/minio-store/
-   $ mc cp ~/Downloads/Product-2.jpg play/minio-store/
-   $ mc cp ~/Downloads/Product-3.jpg play/minio-store/
-   $ mc cp ~/Downloads/Product-4.jpg play/minio-store/
+   mc cp ~/Downloads/Product-1.jpg play/minio-store/
+   mc cp ~/Downloads/Product-2.jpg play/minio-store/
+   mc cp ~/Downloads/Product-3.jpg play/minio-store/
+   mc cp ~/Downloads/Product-4.jpg play/minio-store/
 
    ```
 
@@ -147,10 +147,10 @@ The full code is available here :  [https://github.com/minio/minio-js-store-app]
 
   ```sh
 
-  $ git clone https://github.com/minio/minio-js-store-app
-  $ cd minio-js-store-app
-  $ npm install
-  $ node minio-store.js
+  git clone https://github.com/minio/minio-js-store-app
+  cd minio-js-store-app
+  npm install
+  node minio-store.js
 
   ```
 
