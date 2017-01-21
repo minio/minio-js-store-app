@@ -1,4 +1,4 @@
-# Javascript Shopping App [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/minio/minio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Javascript Shopping App [![Slack](https://slack.minio.io/slack?type=svg)](https://slack.minio.io)
 
 ![minio_JS1](https://github.com/minio/minio-js-store-app/blob/master/docs/screenshots/minio-JS1.jpg?raw=true)
 
