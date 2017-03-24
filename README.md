@@ -26,11 +26,9 @@ Get the code for this example as shown below and then do npm install to get the 
 `minio-store.js` will serve as our app's entry point.
 
 ```sh
-
 git clone https://github.com/minio/minio-js-store-app
 cd minio-js-store-app
 npm install
-
 ```
 
 ##  4. Set Up Bucket
@@ -40,27 +38,21 @@ Make a bucket called `minio-store` on play.minio.io. Use `mc mb` command to acco
 
 
    ```sh
-
     mc mb play/minio-store
-
    ```
 2. Store product image assets can be set to public readwrite. Use `mc policy` command to set the access policy on this bucket to "both". More details on the `mc policy` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#policy).
 
    ```sh
-
     mc policy both play/minio-store
-
    ```
 
 3. Upload store product pictures into this bucket.  Use `mc cp`  command to do this. More details on the `mc cp` command can be found [here](https://docs.minio.io/docs/minio-client-complete-guide#cp).
 
    ```sh
-
    mc cp ~/Downloads/Product-1.jpg play/minio-store/
    mc cp ~/Downloads/Product-2.jpg play/minio-store/
    mc cp ~/Downloads/Product-3.jpg play/minio-store/
    mc cp ~/Downloads/Product-4.jpg play/minio-store/
-
    ```
 
    **NOTE** : We have already created a minio-store bucket on play.minio.io and copied the assets used in this example, into this bucket.
@@ -73,7 +65,6 @@ In `minio-store.js` file, require minio and instantiate a `minioClient` object w
 
 
 ```js
-
 var Minio = require('minio');
 var minioClient = new Minio.Client({
  	 endPoint: 'play.minio.io',
@@ -81,7 +72,6 @@ var minioClient = new Minio.Client({
 	 accessKey: 'Q3AM3UQ867SPQQA43P2F',
 	 secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
 });
-
 ```
 
 **NOTE** : for using minio server locally also add ``secure: false,`` in above code.
@@ -93,7 +83,6 @@ Set up a route for '/' in the minio-store.js file. Using the [listObjects]( http
 
 
 ```js
-
 var minioBucket = 'minio-store'
 
 app.get('/', function(req, res){
@@ -114,7 +103,6 @@ app.get('/', function(req, res){
     res.render('home', { url: assets });
   });
 });
-
 ```
 
 ## 7. Create Views
@@ -122,7 +110,6 @@ app.get('/', function(req, res){
 Loop through `assets_url` in `home.handlebars` to render the thumbnails of product images. For simplicity in this example we do not use a database to store rows of product information. But you may store the image url from this array into your products schema if needed.
 
 ```js
-
 <!-- Page Features -->
 <div class="row text-center">
 	{{#each url}}
@@ -138,7 +125,6 @@ Loop through `assets_url` in `home.handlebars` to render the thumbnails of produ
       </div>
   {{/each}}   
  </div>
-
 ```
 
 ## 8. Run The App
@@ -146,12 +132,10 @@ Loop through `assets_url` in `home.handlebars` to render the thumbnails of produ
 The full code is available here :  [https://github.com/minio/minio-js-store-app](https://github.com/minio/minio-js-store-app).  Do the following steps to start the app server.
 
   ```sh
-
   git clone https://github.com/minio/minio-js-store-app
   cd minio-js-store-app
   npm install
   node minio-store.js
-
   ```
 
   To see the app, open a browser window and visit http://localhost:3000
